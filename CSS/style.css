@@ -27,7 +27,7 @@ a:hover {
 
 #header {
   box-sizing: border-box;
-  height: 70px;
+  block-size: 70px;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -39,13 +39,13 @@ a:hover {
   display: flex;
   list-style: none;
   gap: 1rem;
-  max-height: 0;
+  max-block-size: 0;
   transition: max-height 0.6s ease;
   overflow: hidden;
 }
 
 #nav.active #menu {
-  max-height: 500px;
+  max-block-size: 500px;
 }
 
 #menu a {
@@ -58,11 +58,11 @@ a:hover {
 }
 
 #content {
-  width: 1000px;
+  inline-size: 1000px;
   margin: 0 auto;
-  height: auto;
+  block-size: auto;
   padding: 10px;
-  padding-top: 5px;
+  padding-block-start: 5px;
 }
 
 .home {
@@ -77,19 +77,19 @@ a:hover {
 }
 
 .imgHome {
-  height: auto;
-  width: 70%;
-  max-width: 270px;
-  margin-right: 10px;
+  block-size: auto;
+  inline-size: 70%;
+  max-inline-size: 270px;
+  margin-inline-end: 10px;
   border: 1px solid black;
 }
 
 .lateral_content {
   flex: 2;
-  float: left;
-  width: 680px;
+  float: inline-start;
+  inline-size: 680px;
   padding: 15px;
-  margin-left: 2px;
+  margin-inline-start: 2px;
   font-size: 22px;
   text-align: justify;
 }
@@ -109,14 +109,14 @@ a:hover {
   background-color: Silver;
   border: 3px dashed black;
   padding: 5px;
-  padding-left: 40px;
-  margin-bottom: 0;
+  padding-inline-start: 40px;
+  margin-block-end: 0;
 }
 
 #footer {
   position: relative;
-  bottom: 0;
-  width: 100%;
+  inset-block-end: 0;
+  inline-size: 100%;
   background-color: black;
   color: white;
   padding: 20px 0;
@@ -126,17 +126,17 @@ a:hover {
 
 #destaque {
   margin: 0 auto;
-  margin-bottom: 10px;
-  height: auto;
+  margin-block-end: 10px;
+  block-size: auto;
 }
 
 #destaque b {
   display: block;
   font-size: 21px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-  width: 250px;
-  border-bottom: 5px solid black;
+  padding-block-end: 5px;
+  margin-block-end: 5px;
+  inline-size: 250px;
+  border-block-end: 5px solid black;
 }
 
 .artigo-home {
@@ -144,14 +144,14 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 20px;
-  margin-right: 30px;
+  margin-block-end: 20px;
+  margin-inline-end: 30px;
   text-align: center;
 }
 
 .artigo-home img {
-  width: 26%;
-  height: auto;
+  inline-size: 26%;
+  block-size: auto;
   border: 1px solid black;
 }
 
@@ -168,19 +168,19 @@ a:hover {
   #menu {
     display: block;
     position: absolute;
-    width: 100%;
-    top: 70px;
-    right: 0;
+    inline-size: 100%;
+    inset-block-start: 70px;
+    inset-inline-end: 0;
     background: #e7e7e7;
     transition: 0.6s;
     z-index: 1000;
-    height: 0;
+    block-size: 0;
     visibility: hidden;
     overflow-y: hidden;
   }
 
   #nav.active #menu {
-    height: calc(100vh - 70px);
+    block-size: calc(100vh - 70px);
     visibility: visible;
     overflow-y: auto;
   }
@@ -188,7 +188,7 @@ a:hover {
   #menu a {
     padding: 1rem 0;
     margin: 0.5rem 1rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    border-block-end: 2px solid rgba(0, 0, 0, 0.05);
   }
 
   #btn-mobile {
@@ -202,24 +202,24 @@ a:hover {
   }
 
   #hamburger {
-    border-top: 2px solid;
-    width: 20px;
+    border-block-start: 2px solid;
+    inline-size: 20px;
   }
 
   #hamburger::after,
   #hamburger::before {
     content: "";
     display: block;
-    width: 20px;
-    height: 2px;
+    inline-size: 20px;
+    block-size: 2px;
     background: currentColor;
-    margin-top: 5px;
+    margin-block-start: 5px;
     transition: 0.3s;
     position: relative;
   }
 
   #nav.active #hamburger {
-    border-top-color: transparent;
+    border-block-start-color: transparent;
   }
 
   #nav.active #hamburger::before {
@@ -228,12 +228,12 @@ a:hover {
 
   #nav.active #hamburger::after {
     transform: rotate(-135deg);
-    top: -7px;
+    inset-block-start: -7px;
   }
 
   #content {
-    max-width: 100%;
-    width: 90%;
+    max-inline-size: 100%;
+    inline-size: 90%;
     margin: 0 auto;
   }
 
@@ -243,34 +243,34 @@ a:hover {
   }
 
   .imgHome {
-    width: 100%;
-    max-width: 270px;
-    height: auto;
+    inline-size: 100%;
+    max-inline-size: 270px;
+    block-size: auto;
     margin: 0 auto;
   }
 
   .lateral_content {
     float: none;
-    width: 100%;
+    inline-size: 100%;
     font-size: 20px;
   }
 
   img {
-    max-width: 100%;
-    height: auto;
+    max-inline-size: 100%;
+    block-size: auto;
   }
 
   .artigo-home img {
-    width: 80%;
-    max-width: 300px;
+    inline-size: 80%;
+    max-inline-size: 300px;
   }
 
   .artigo-home {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 
   #destaque b {
-    width: 90%;
+    inline-size: 90%;
     font-size: 20px;
   }
 }

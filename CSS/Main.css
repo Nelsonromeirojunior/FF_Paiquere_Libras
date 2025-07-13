@@ -18,7 +18,7 @@ body {
   background-color: var(--bs-white) !important;
 }
 .img-200-200 {
-  width: 550px;
+  inline-size: 550px;
   border: 5px solid var(--bs-black);
 }
 .container {
@@ -26,8 +26,8 @@ body {
   text-align: center;
 }
 .carousel-item img {
-  width: 390px;
-  height: auto;
+  inline-size: 390px;
+  block-size: auto;
   object-fit: cover;
   margin: 0 auto;
   border-radius: 8px;
@@ -47,8 +47,8 @@ a:hover {
 
 .map-container {
   position: relative;
-  padding-bottom: 56.25%; /* Proporção 16:9 */
-  height: 0;
+  padding-block-end: 56.25%; /* Proporção 16:9 */
+  block-size: 0;
   overflow: hidden;
   border: 2px solid #ccc;
   border-radius: 8px;
@@ -56,9 +56,9 @@ a:hover {
 }
 .map-container iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
   border: 0;
 }
