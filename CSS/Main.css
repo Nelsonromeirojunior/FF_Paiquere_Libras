@@ -1,0 +1,64 @@
+body {
+  background-color: var(--bs-gray-dark) !important;
+  color: var(--bs-white) !important;
+}
+.navbar {
+  background-color: var(--bs-black) !important;
+}
+.offcanvas {
+  background-color: var(--bs-black) !important;
+}
+.bg-body-tertiary {
+  background-color: var(--bs-black) !important;
+}
+.offcanvas-header {
+  color: var(--bs-white) !important;
+}
+.btn-close {
+  background-color: var(--bs-white) !important;
+}
+.img-200-200 {
+  inline-size: 550px;
+  border: 5px solid var(--bs-black);
+}
+.container {
+  color: var(--bs-white);
+  text-align: center;
+}
+.carousel-item img {
+  inline-size: 390px;
+  block-size: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+a {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.map-container {
+  position: relative;
+  padding-block-end: 56.25%; /* Proporção 16:9 */
+  block-size: 0;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.map-container iframe {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  border: 0;
+}
